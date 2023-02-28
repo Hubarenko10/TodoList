@@ -1,33 +1,29 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { nanoid } from 'nanoid';
 
-const tasksInitialState = [];
+const tasksInitialState = {
+  lastId: 0,
+  items: [],
+};
 
 const tasksSlice = createSlice({
   name: 'tasks',
   initialState: tasksInitialState,
   reducers: {
-    addTask: {
-      reducer(state, action) {
-        state.push(action.payload);
-      },
-      prepare({ text, description }) {
-        return {
-          payload: {
-            text,
-            description,
-            id: nanoid(),
-            completed: false,
-          },
-        };
-      },
+    addTask(state, action) {
+      const { text, description } = action.payload;
+      const newTask = {
+        id: state.lastId + 1,
+        text,
+        description,
+        completed: false,
+      };
+      state.items.push(newTask);
+      state.lastId += 1;
     },
     toggleCompleted(state, action) {
-      for (const task of state) {
-        if (task.id === action.payload) {
-          task.completed = !task.completed;
-          break;
-        }
+      const task = state.items.find((item) => item.id === action.payload);
+      if (task) {
+        task.completed = !task.completed;
       }
     },
   },
