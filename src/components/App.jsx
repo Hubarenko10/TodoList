@@ -1,16 +1,15 @@
+import { useEffect } from "react";
+import { Todo } from "./Todo/Todo";
+
+
 export const App = () => {
+  useEffect(() => {
+  document.body.style.background = '#DCDCDC'
+  })
+
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101'
-      }}
-    >
-      Hello,Developer
-    </div>
+<>
+<Todo/>
+</>
   );
 };
