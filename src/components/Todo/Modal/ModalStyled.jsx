@@ -28,6 +28,8 @@ export const ModalHeader = styled.h1`
   color: #333;
   text-shadow: 1px 1px 1px #333;
   font-size: 30px;
+  max-width: 100%;
+  word-wrap: break-word;
 `;
 
 export const DescriptionHeader = styled.h2`
