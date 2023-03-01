@@ -40,6 +40,8 @@ export const DescriptionText = styled.p`
   font-family: Arial, sans-serif;
   color: #333;
   font-size: 17px;
+  max-width: 100%;
+  word-wrap: break-word;
 `;
 export const StatusHeader = styled.h2`
   font-family: Arial, sans-serif;

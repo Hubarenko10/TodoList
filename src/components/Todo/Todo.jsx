@@ -65,6 +65,8 @@ export const Todo = () => {
             {Error && text === '' && (
               <p
                 style={{
+                  marginTop: 3,
+                  margin: 0,
                   position: 'absolute',
                   top: '11.9',
                   left: '11.8',
@@ -97,6 +99,8 @@ export const Todo = () => {
             {Error && description === '' && (
               <p
                 style={{
+                  marginTop: 3,
+                  margin: 0,
                   position: 'absolute',
                   top: '11.9',
                   left: '11.8',
