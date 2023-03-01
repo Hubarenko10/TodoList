@@ -21,8 +21,8 @@ export const TodoInput = styled.input`
   border: solid 1px #dddddd;
   border-radius: 5px;
   flex-grow: 1;
-  &:focus{
-  border-color: green;  
+  &:focus {
+    border-color: green;
   }
 `;
 export const TitleBox = styled.div`
@@ -48,5 +48,3 @@ export const FormBtn = styled.button`
     background: lightslategrey;
   }
 `;
-
-

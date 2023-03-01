@@ -1,5 +1,12 @@
 import { TodoList } from './TodoList/TodoList';
-import { TodoForm, TitleBox, DescriptionBox, FormBtn,TodoHeader,TodoInput } from './TodoStyled';
+import {
+  TodoForm,
+  TitleBox,
+  DescriptionBox,
+  FormBtn,
+  TodoHeader,
+  TodoInput,
+} from './TodoStyled';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addTask } from 'components/Redux/taskSlice';

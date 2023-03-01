@@ -34,17 +34,17 @@ export const TodoList = () => {
           {tasks &&
             tasks.map(({ text, description, id, completed }) => (
               <ListItem
-              onClick={(event) => {
-                const target = event.target;
-                if (
-                  target.tagName !== "INPUT" &&
-                  target.tagName !== "LABEL" &&
-                  target.tagName !== "path"
-                ) {
-                  dispatch(openModal());
-                  setId(id);
-                }
-              }}
+                onClick={event => {
+                  const target = event.target;
+                  if (
+                    target.tagName !== 'INPUT' &&
+                    target.tagName !== 'LABEL' &&
+                    target.tagName !== 'path'
+                  ) {
+                    dispatch(openModal());
+                    setId(id);
+                  }
+                }}
                 key={id}
               >
                 <Cell>{id}.</Cell>

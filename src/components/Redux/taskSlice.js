@@ -21,7 +21,7 @@ const tasksSlice = createSlice({
       state.lastId += 1;
     },
     toggleCompleted(state, action) {
-      const task = state.items.find((item) => item.id === action.payload);
+      const task = state.items.find(item => item.id === action.payload);
       if (task) {
         task.completed = !task.completed;
       }
@@ -29,5 +29,5 @@ const tasksSlice = createSlice({
   },
 });
 
-export const {addTask,toggleCompleted} = tasksSlice.actions;
+export const { addTask, toggleCompleted } = tasksSlice.actions;
 export const tasksReducer = tasksSlice.reducer;
