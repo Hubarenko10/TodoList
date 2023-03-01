@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const BoxList = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 20px;
   margin-left: 20px;
   width: 30%;
 `;
