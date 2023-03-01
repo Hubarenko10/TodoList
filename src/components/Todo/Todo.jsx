@@ -1,5 +1,5 @@
 import { TodoList } from './TodoList/TodoList';
-import { TodoForm, TitleBox, DescriptionBox, FormBtn } from './TodoStyled';
+import { TodoForm, TitleBox, DescriptionBox, FormBtn,TodoHeader,TodoInput } from './TodoStyled';
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { addTask } from 'components/Redux/taskSlice';
@@ -40,9 +40,9 @@ export const Todo = () => {
     <>
       <TodoForm>
         <TitleBox>
-          <p>Title:</p>
+          <TodoHeader>Title:</TodoHeader>
           <label>
-            <input
+            <TodoInput
               onChange={handleChange}
               value={text}
               type="text"
@@ -70,9 +70,9 @@ export const Todo = () => {
           </label>
         </TitleBox>
         <DescriptionBox>
-          <p>Description:</p>
+          <TodoHeader>Description:</TodoHeader>
           <label>
-            <input
+            <TodoInput
               onChange={handleChange}
               value={description}
               type="text"
